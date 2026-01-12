@@ -11,7 +11,7 @@ initial
     $dumpfile("example.vcd");
     $dumpvars(0,testbench);
 
-    $monitor($time," A=%b,B=%b,Cin=%b,S=%b,Cout=%b",A,B,Cin,S,Cout);
+    $monitor("t=%0t A=%b,B=%b,Cin=%b || S=%b Cout=%b",$time,A,B,Cin,S,Cout);
     
     #5 A=0; B=0;Cin=0;
     #5 A=0; B=0;Cin=1;
