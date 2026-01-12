@@ -1,0 +1,117 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000228edb7ad60 .scope module, "testjkff2" "testjkff2" 2 3;
+ .timescale 0 0;
+UDP_jkff2 .udp/sequ "jkff2", 5, 2
+ ,"????100"
+ ,"????011"
+ ,"????00-"
+ ,"?r0011-"
+ ,"?r01110"
+ ,"?r10111"
+ ,"0r11111"
+ ,"1r11110";
+L_00000228edb28bc0 .udp UDP_jkff2, v00000228edb2bcd0_0, v00000228edb2bd70_0, v00000228edb291d0_0, v00000228edb29270_0, v00000228edb7aef0_0;
+v00000228edb7aef0_0 .var "clear", 0 0;
+v00000228edb2bcd0_0 .var "clk", 0 0;
+v00000228edb2bd70_0 .var "j", 0 0;
+v00000228edb291d0_0 .var "k", 0 0;
+v00000228edb29270_0 .var "preset", 0 0;
+v00000228edb29310_0 .net "q", 0 0, L_00000228edb28bc0;  1 drivers
+    .scope S_00000228edb7ad60;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000228edb2bcd0_0, 0, 1;
+T_0.0 ;
+    %load/vec4 v00000228edb2bcd0_0;
+    %inv;
+    %store/vec4 v00000228edb2bcd0_0, 0, 1;
+    %jmp T_0.0;
+    %end;
+    .thread T_0;
+    .scope S_00000228edb7ad60;
+T_1 ;
+    %vpi_call 2 21 "$dumpfile", "jk_ff.vcd" {0 0 0};
+    %vpi_call 2 22 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000228edb7ad60 {0 0 0};
+    %vpi_call 2 24 "$monitor", "t = %0t , preset = %b , reset = %b , j=%b , k = %b | q = %b", $time, v00000228edb29270_0, v00000228edb7aef0_0, v00000228edb2bd70_0, v00000228edb291d0_0, v00000228edb29310_0, " " {0 0 0};
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000228edb29270_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000228edb7aef0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000228edb29270_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb7aef0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb29270_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb7aef0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb29270_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000228edb7aef0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb29270_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb7aef0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000228edb2bd70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000228edb291d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb29270_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb7aef0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000228edb2bd70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb291d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb29270_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb7aef0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000228edb2bd70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000228edb291d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb29270_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb7aef0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb2bd70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000228edb291d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb29270_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb7aef0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb2bd70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000228edb291d0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 34 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "testjkff2.v";
