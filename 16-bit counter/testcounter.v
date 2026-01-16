@@ -17,7 +17,7 @@ initial begin
   $monitor($time," count is %d and rst is %d enable is %d",count,rst,enable);
   rst = 1;
   #5 rst = 0; enable = 1;
-  #100 enable = 0;
+  #90 enable = 0;
   #40 enable = 1;
   #40 rst = 1;
   #10 $finish;
