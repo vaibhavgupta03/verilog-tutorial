@@ -1,5 +1,5 @@
 $date
-	Fri Jan 16 19:37:27 2026
+	Sat Jan 17 22:24:14 2026
 $end
 $version
 	Icarus Verilog
@@ -11,12 +11,14 @@ $scope module testcounter $end
 $var wire 16 ! count [15:0] $end
 $var reg 1 " clk $end
 $var reg 1 # enable $end
-$var reg 1 $ rst $end
+$var reg 1 $ mode $end
+$var reg 1 % rst $end
 $scope module DUT $end
 $var wire 1 " clk $end
 $var wire 1 # enable $end
-$var wire 1 $ rst $end
-$var reg 16 % count [15:0] $end
+$var wire 1 $ mode $end
+$var wire 1 % rst $end
+$var reg 16 & count [15:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -25,65 +27,66 @@ $dumpall
 $end
 #0
 $dumpvars
-b0 %
-1$
-x#
+b0 &
+1%
+0$
+0#
 0"
 b0 !
 $end
 #5
 b1 !
-b1 %
+b1 &
 1#
-0$
+0%
 1"
 #10
 0"
 #15
 b10 !
-b10 %
+b10 &
 1"
 #20
 0"
 #25
 b11 !
-b11 %
+b11 &
 1"
 #30
 0"
 #35
 b100 !
-b100 %
+b100 &
 1"
 #40
 0"
 #45
 b101 !
-b101 %
+b101 &
 1"
 #50
 0"
 #55
 b110 !
-b110 %
+b110 &
 1"
 #60
 0"
 #65
 b111 !
-b111 %
+b111 &
 1"
 #70
 0"
 #75
 b1000 !
-b1000 %
+b1000 &
 1"
 #80
 0"
 #85
 b1001 !
-b1001 %
+b1001 &
 1"
 #90
 0"
@@ -98,6 +101,7 @@ b1001 %
 0"
 #115
 1"
+1$
 #120
 0"
 #125
@@ -105,36 +109,44 @@ b1001 %
 #130
 0"
 #135
-b1010 !
-b1010 %
 1"
-1#
 #140
 0"
 #145
-b1011 !
-b1011 %
 1"
 #150
 0"
 #155
-b1100 !
-b1100 %
+b1000 !
+b1000 &
 1"
+1#
 #160
 0"
 #165
-b1101 !
-b1101 %
+b111 !
+b111 &
 1"
 #170
 0"
 #175
-b0 !
-b0 %
+b110 !
+b110 &
 1"
-1$
 #180
 0"
 #185
+b101 !
+b101 &
+1"
+#190
+0"
+#195
+b0 !
+b0 &
+1"
+1%
+#200
+0"
+#205
 1"
