@@ -1,0 +1,67 @@
+$date
+	Sat Jan 24 17:53:47 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module binary2grey_tb $end
+$var wire 4 ! GS [3:0] $end
+$var wire 4 " GD [3:0] $end
+$var wire 4 # GB [3:0] $end
+$var reg 4 $ B [3:0] $end
+$scope module DUT1 $end
+$var wire 4 % B [3:0] $end
+$var wire 4 & GS [3:0] $end
+$upscope $end
+$scope module DUT2 $end
+$var wire 4 ' B [3:0] $end
+$var wire 4 ( GD [3:0] $end
+$upscope $end
+$scope module DUT3 $end
+$var wire 4 ) B [3:0] $end
+$var reg 4 * GB [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1101 *
+b1001 )
+b1101 (
+b1001 '
+b1101 &
+b1001 %
+b1001 $
+b1101 #
+b1101 "
+b1101 !
+$end
+#10
+b1100 !
+b1100 &
+b1100 "
+b1100 (
+b1100 #
+b1100 *
+b1000 $
+b1000 %
+b1000 '
+b1000 )
+#20
+b1111 !
+b1111 &
+b1111 "
+b1111 (
+b1111 #
+b1111 *
+b1010 $
+b1010 %
+b1010 '
+b1010 )
+#30
