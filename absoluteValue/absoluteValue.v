@@ -13,3 +13,10 @@ begin
   else Y = 8'bx;
 end
 endmodule
+
+module absoluteValue_df(I,Y_D);
+input signed [7:0] I;
+output signed [7:0]Y_D;
+
+assign Y_D = I > 0 ? I : -I;
+endmodule

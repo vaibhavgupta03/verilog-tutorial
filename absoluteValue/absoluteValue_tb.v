@@ -1,8 +1,10 @@
 module absoluteValue_tb;
 reg [7:0] I;
 wire [7:0] Y;
+wire [7:0] Y_D;
 
 absoluteValue DUT(I,Y);
+absoluteValue_df UUT(I,Y_D);
 
 initial
 begin
@@ -18,6 +20,6 @@ initial
 begin
   $dumpfile("wave.vcd");
   $dumpvars(0,absoluteValue_tb);
-  $monitor("Time =%t \t Input Number = %b \t Absolute Value Output = %b",$time,I,Y);
+  $monitor("Time =%t \t Input Number = %b \t Absolute Value Output = %b\t Absolute Value (Dataflow Ckt) = %b",$time,I,Y,Y_D);
 end
 endmodule
